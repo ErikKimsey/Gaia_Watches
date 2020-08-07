@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FacePlaneController : MonoBehaviour
+public class FacePlaneController 
 {
     GameObject[] planes;
     public float degToRotate;
-    
-    void Start()
-    {
+
+    public void Init(){
         CollectAllPlanes();
     }
 
