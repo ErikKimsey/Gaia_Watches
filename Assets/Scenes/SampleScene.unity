@@ -1202,7 +1202,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ec8f5cff3f17445149625c7e99931d89,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec8f5cff3f17445149625c7e99931d89,
         type: 3}
@@ -30172,7 +30172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &665423899
 GameObject:
@@ -30251,7 +30251,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3cc4693b4d016464195bb0c22cef159a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3cc4693b4d016464195bb0c22cef159a,
         type: 3}
@@ -30330,7 +30330,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6c68a40763d344a7586532ddf16b18a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c68a40763d344a7586532ddf16b18a9,
         type: 3}
@@ -30812,6 +30812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1838954961}
+  - component: {fileID: 1838954962}
   m_Layer: 0
   m_Name: TouchControls
   m_TagString: Untagged
@@ -30831,8 +30832,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1838954962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838954960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c06038fab0e542248e19bab5588e910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2044563704
 GameObject:
   m_ObjectHideFlags: 0
@@ -30987,5 +31000,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 70.32, y: 135.3, z: 90}

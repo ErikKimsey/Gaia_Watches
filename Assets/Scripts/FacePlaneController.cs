@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FacePlaneController 
+public class FacePlaneController : MonoBehaviour
 {
-    GameObject[] planes;
+    
     public float degToRotate;
+    GameObject[] planes;
+    private Vector3 mousePos;
+    private Touch touch;
 
-    public void Init(){
+    void Start()
+    {
         CollectAllPlanes();
     }
 
@@ -17,12 +21,11 @@ public class FacePlaneController
     }
 
     public void RotatePlanes(){
-
+        Debug.Log("ROTATING");
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+
     }
 }

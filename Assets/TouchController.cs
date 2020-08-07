@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class TouchController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private Vector3 touchPosition;
+    private FacePlaneController planeController;
+
+    private Vector3 mousePos;
+    private Touch touch;
 
     void Start()
     {
-        
+        planeController = GetComponent<FacePlaneController>();
+    }
+
+    private void GetTouches(){
+        if(Input.touchCount > 0){
+            touch = Input.GetTouch(0);
+            Debug.Log(touch);
+            planeController.RotatePlanes();
+        } else if (Input.GetMouseButton(0)){
+            mousePos = Input.mousePosition;
+            Debug.Log(mousePos);
+            planeController.RotatePlanes();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.touchCount > 0 || Input.GetMouseButton(0)){
-            // Touch touch = Input.GetTouch(0);
-            touchPosition = Input.mousePosition;
-            Debug.Log(touchPosition);
-        }
+        GetTouches();
     }
 }
