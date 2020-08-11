@@ -12,16 +12,16 @@ public class FacePlaneController : MonoBehaviour
 
     void Start()
     {
-        CollectAllPlanes();
+        
     }
 
-    private void CollectAllPlanes(){
-        planes = GameObject.FindGameObjectsWithTag("face_plane");
-        Debug.Log(planes[0]);
+    void OnMouseDown() {
+      Debug.Log("touched somebody");
+      Debug.Log(this);
     }
 
-    public void RotatePlanes(){
-        Debug.Log("ROTATING");
+    public void Rotate(){
+        // Debug.Log("ROTATING");
     }
 
     void FixedUpdate()

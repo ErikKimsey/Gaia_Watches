@@ -5,7 +5,7 @@ using UnityEngine;
 public class TouchController : MonoBehaviour
 {
     private FacePlaneController planeController;
-
+    private RaycastHit hit;
     private Vector3 mousePos;
     private Touch touch;
 
@@ -14,15 +14,28 @@ public class TouchController : MonoBehaviour
         // planeController = GetComponent<FacePlaneController>();
     }
 
+    private void HandleTouch(Vector3 _touch){
+      _touch.z = 10f;
+      Vector3 worldTouchPos;
+      worldTouchPos = Camera.main.ScreenToWorldPoint(_touch);
+      FindNearestObject(worldTouchPos);
+
+    }
+
+    private void FindNearestObject(Vector3 _touch){
+      Ray ray = Camera.main.ScreenPointToRay(_touch);
+      if(Physics.Raycast(ray, out hit)){
+        Debug.Log(hit.collider.name);
+      }
+    }
+
     private void GetTouches(){
         if(Input.touchCount > 0){
             touch = Input.GetTouch(0);
-            Debug.Log(touch);
-            planeController.RotatePlanes();
+            HandleTouch(touch.position);
         } else if (Input.GetMouseButton(0)){
             mousePos = Input.mousePosition;
-            Debug.Log(mousePos);
-            new FacePlaneController().RotatePlanes();
+            HandleTouch(mousePos);
         }
     }
 
